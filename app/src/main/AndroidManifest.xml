@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
 
     <application
+        android:name=".CrashApp"
         android:label="Charging Screen"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
 
@@ -25,6 +26,11 @@
             android:showWhenLocked="true"
             android:turnScreenOn="true"
             android:launchMode="singleTask"/>
+
+        <activity
+            android:name=".CrashActivity"
+            android:exported="false"
+            android:process=":crash"/>
 
         <service
             android:name=".ChargingService"
